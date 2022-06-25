@@ -11,6 +11,6 @@ else
     if [[ $user_duration -eq 0 ]]; then
     exit -1
     else
-        MYSQL_PWD=$DB_PASS mysql -u $DB_USER -h $DB_HOST -D $DB_NAME  -sse "UPDATE users SET is_active='1', active_address='OpenConnect', active_date='$datenow', device_connected='1' WHERE user_name='$USERNAME'"
+        MYSQL_PWD=$DB_PASS mysql -u $DB_USER -h $DB_HOST -D $DB_NAME  -sse "UPDATE users SET is_active='1', active_address='$IP_REAL_LOCAL', active_date='$datenow', device_connected='1' WHERE user_name='$USERNAME'"
     fi
 fi
